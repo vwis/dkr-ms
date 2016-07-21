@@ -31,6 +31,14 @@ RUN apt-get update && \
 # Install MapServer and friends
 RUN apt-get install -y \
     libapache2-mod-mapcache apache2 apache2-utils cgi-mapserver tinyows
+    
+RUN apt-get install -y autoconf flex git libxml2-dev make build-essential \
+    libpq-dev libfcgi-dev mlocate lynx libgdal-dev libfcgi-dev apache2-dev \
+    libpixman-1-dev cmake libxml2-utils wget libaprutil1-dev libaprutil1-dbd-pgsql \
+    cmake libproj-dev libcurl4-gnutls-dev libfreetype6-dev
+    
+RUN apt-get -y install sshpass
+
 
 # ---------- SETUP --------------
 

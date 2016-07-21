@@ -14,13 +14,13 @@ Git clone this repository to get the Dockerfile, and cd to it.
 You can build the image with :
 
 ```sh
-sudo docker.io build -t vwis/dkr-ms .
+sudo docker build -t vwis/dkr-ms .
 ```
 
 Run the container with :
 
 ```sh
-sudo docker.io run --rm -P --name dkr-ms-test vwis/dkr-ms /sbin/my_init
+sudo docker run --rm -P --name dkr-ms-test vwis/dkr-ms /sbin/my_init
 ```
 
 Access the server
@@ -29,7 +29,7 @@ Access the server
 Once the container run, you can access MapServer and MapCache services. You need to use docker ps to find out what local host port the container is mapped to first:
 
 ```sh
-$ sudo docker.io ps
+$ sudo docker ps
 CONTAINER ID        IMAGE                    COMMAND             CREATED             STATUS              PORTS                   NAMES
 a2d16f1a0540        vwis/dkr-ms:latest   /sbin/my_init       23 seconds ago      Up 22 seconds       0.0.0.0:49157->80/tcp   dkr-ms-test
 ```
@@ -63,5 +63,5 @@ References
 ==========
 
 Dockerfile reference :
-http://docs.docker.io/reference/builder/
+http://docs.docker/reference/builder/
 
